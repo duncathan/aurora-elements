@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Night Domain</name>
+        <update version="0.1.0">
+            <file name="cleric-night.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/cleric-night.xml" />
+        </update>
+    </info>
+    
+    <element name="Night Domain" type="Archetype" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_NIGHT_DOMAIN">
+        <supports>Divine Domain</supports>
+        <description>
+            <p class="indent">The night is mysterious, and conceals many unseen dangers. However, the cover of darkness also brings protection from predators and shadows within which one can conceal themselves. The gods of night are varied, encompassing those who would use the cover of darkness to conceal others from threats, to those who would use the shadows for wrong doings. The motives of night gods are often shrouded in mystery. Many teach their followers that it is only by peering through the darkness and looking beyond what is hidden that one can attain truth. Clerics of night do their best to keep themselves and their companions safe while journeying through the darkness.</p>
+            <h5 class="caption">Night Domain Features</h5>
+            <table>
+                <thead>
+                    <tr><td>Cleric Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>1st</td><td>Domain Spells, Eye of Twilight, Ward of Shadows</td></tr>
+                <tr><td>2nd</td><td>Channel Divinity: Invocation of Night</td></tr>
+                <tr><td>6th</td><td>Improved Ward, Eye of Twilight improvement</td></tr>
+                <tr><td>8th</td><td>Veil of Dreams, Eye of Twilight improvement</td></tr>
+                <tr><td>17th</td><td>Creature of the Night, Eye of Twilight improvement</td></tr>
+            </table>
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_NIGHT_DOMAIN_SPELLS" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_EYE_OF_TWILIGHT" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_WARD_OF_SHADOWS" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_INVOCATION_OF_NIGHT" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_IMPROVED_WARD" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_VEIL_OF_DREAMS" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_CREATURE_OF_THE_NIGHT" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_NIGHT_DOMAIN_SPELLS" level="1" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_EYE_OF_TWILIGHT" level="1" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_WARD_OF_SHADOWS" level="1" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_INVOCATION_OF_NIGHT" level="2" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_IMPROVED_WARD" level="6" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_VEIL_OF_DREAMS" level="8" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_CREATURE_OF_THE_NIGHT" level="17" />
+        </rules>
+    </element>
+    
+    <element name="Domain Spells" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_NIGHT_DOMAIN_SPELLS">
+        <description>
+            <p><em>1st-level Night Domain feature</em></p>
+			<p class="indent">You gain domain spells at the cleric levels listed in the Night Domain Spells table. See the Divine Domain class feature in the <i>Player’s Handbook</i> for how domain spells work.</p>
+			<h5 class="caption">Night Domain Spells</h5>
+			<table>
+				<thead>
+					<tr><td>Cleric Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>bless, goodberry</em></td></tr>
+				<tr><td>3rd</td><td><em>aid, heroism</em></td></tr>
+				<tr><td>5th</td><td><em>beacon of hope, spirit guardians</em></td></tr>
+				<tr><td>7th</td><td><em>banishment, faithful hound</em></td></tr>
+				<tr><td>9th</td><td><em>mass cure wounds, telepathic bond</em></td></tr>
+			</table>
+        </description>
+        <sheet display="false" />
+        <rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SLEEP" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_HPP_WOOD_SPELL_VEIL_OF_DUSK" level="1" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DARKNESS" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_MOONBEAM" level="3" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_NONDETECTION" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_HPP_WOOD_SPELL_GLOBE_OF_TWILIGHT" level="5" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DIVINATION" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_HPP_WOOD_SPELL_STELLAR_BODIES" level="7" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_DREAM" level="9" spellcasting="Cleric" prepared="true" />
+			<grant type="Spell" id="ID_PHB_SPELL_SEEMING" level="9" spellcasting="Cleric" prepared="true" />
+		</rules>
+    </element>
+    
+    <element name="Eye of Twilight" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_EYE_OF_TWILIGHT">
+        <description>
+            <p><em>1st-level Night Domain feature</em></p>
+            <p class="indent">Beginning at Ist level, a divine blessing grants you the ability to see more clearly in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in magical or nonmagical darkness as if it were only dim light. You can’t discern color in the darkness, only shades of gray.</p>
+            <p class="indent">When you reach Gth level, you can see in dim light within 120 feet of you as if it were bright light, and in magical or nonmagical darkness as if it were dim light. You can't discern color in the darkness, only shades of gray.</p>
+            <p class="indent">At 8th level, you can see normally in darkness, both magical and nonmagical within 120 feet.</p>
+            <p class="indent">Finally, at 17th level, your eyes are able to see the truth hiding within darkness. You gain the ability to call upon the powers of your deity to grant yourself truesight within 120 feet of you for a number of minutes equal to your Wisdom modifier (a minimum of | minute). Your truesight only functions while in conditions of magical or nonmagical darkness. Once you have used this feature, you cannot use it again until you have completed a long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Vision" id="ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_DARKVISION" />
+            <grant type="Vision" id="ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_SUPERIORDARKVISION" level="6" />
+            <grant type="Vision" id="ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_ULTIMATEDARKVISION" level="8" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_EYE_OF_TWILIGHT_TRUESIGHT" level="17" />
+        </rules>
+    </element>
+    <element name="Darkvision" type="Vision" source="Player’s Handbook" id="ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_DARKVISION">
+		<requirements>!(ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_SUPERIORDARKVISION||ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_ULTIMATEDARKVISION)</requirements>
+		<description />
+        <compendium display="false" />
+		<sheet>
+			<description>You can see in dim light within {{darkvision:range}} feet of you as if it were bright light, and in darkness as if it were dim light.</description>
+		</sheet>
+		<rules>
+			<stat name="darkvision:range" value="60" bonus="base" />
+		</rules>
+	</element>
+    <element name="Darkvision" type="Vision" source="Player’s Handbook" id="ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_SUPERIORDARKVISION">
+		<requirements>!ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_ULTIMATEDARKVISION</requirements>
+		<description />
+        <compendium display="false" />
+		<sheet>
+			<description>You can see in dim light within {{darkvision:range}} feet of you as if it were bright light, and in darkness as if it were dim light.</description>
+		</sheet>
+		<rules>
+			<stat name="darkvision:range" value="120" bonus="base" />
+		</rules>
+	</element>
+    <element name="Darkvision" type="Vision" source="Player’s Handbook" id="ID_HPP_WOOD_VISION_EYE_OF_TWILIGHT_ULTIMATEDARKVISION">
+		<description />
+        <compendium display="false" />
+		<sheet>
+			<description>You can see normally in darkness within {{darkvision:range}} feet.</description>
+		</sheet>
+		<rules>
+			<stat name="darkvision:range" value="120" bonus="base" />
+		</rules>
+	</element>
+    <element name="Eye of Twilight (Truesight)" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_EYE_OF_TWILIGHT_TRUESIGHT">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Eye of Twilight" action="Action" usage="1/Long Rest">
+            <description>You can grant yourself truesight within 120ft of you for {{eye of twilight:duration}} minutes. Your truesight only functions in darkness.</description>
+        </sheet>
+        <rules>
+            <grant type="Vision" id="ID_VISION_TRUESIGHT" />
+            <stat name="eye of twilight:duration" value="wisdom:modifier" bonus="base" />
+            <stat name="eye of twilight:duration" value="1" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Ward of Shadows" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_WARD_OF_SHADOWS">
+        <description>
+            <p><em>1st-level Night Domain feature</em></p>
+            <p class="indent">At 1st level, you can create a ward of divine shadows to conceal yourself from an attacking enemy. When attacked by a creature you can see within 30 feet of you, you can use your reaction to impose disadvantage on the attack roll, as shadows envelop your form. An attacker that can't be blinded is immune to this feature.</p>
+            <p class="indent">You can use this feature a number of times equal to your Wisdom modifier (a minimum of once), and regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet action="Reaction" usage="{{ward of shadows:count}}/Long Rest">
+            <description>When attacked by a creature you can see within 30ft that can be blinded: Impose disadvantage on the attack roll.</description>
+            <description level="6">When anyone is attacked by a creature you can see within 30ft that can be blinded: Impose disadvantage on the attack roll.</description>
+        </sheet>
+        <rules>
+            <stat name="ward of shadows:count" value="wisdom:modifier" bonus="base" />
+            <stat name="ward of shadows:count" value="1" bonus="base" />
+        </rules>
+    </element>
+
+    <element name="Channel Divinity: Invocation of Night" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_INVOCATION_OF_NIGHT">
+        <description>
+            <p><em>2nd-level Night Domain feature</em></p>
+            <p class="indent">Starting at 2nd level, you can use your Channel Divinity to harness the powers of night, clouding the vision of your foes in a shroud of darkness.</p>
+            <p class="indent">As an action, you present your holy symbol causing any source of mundane or magical light within 30 feet of you to be extinguished. Additionally, each hostile creature within 30 feet of you must make a Constitution saving throw. A creature who fails the saving throw is blinded for a number of rounds equal to your cleric level. A creature blinded in this way gets a new saving throw at the end of each of its turns to remove the effect. A creature that has total cover from you is not affected.</p>
+        </description>
+        <sheet alt="Invocation of Night" action="Action" usage="Channel Divinity">
+			<description>Present your holy symbol, extinguishing any light source within 30ft. Each enemy within 30ft and not within total cover from you makes a Constitution saving throw. On failure: they're blinded for {{level:cleric}} rounds. If blinded, each foe gets a new saving throw at the end of its turn to remove the effect.</description>
+		</sheet>
+    </element>
+
+    <element name="Improved Ward" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_IMPROVED_WARD">
+        <description>
+            <p><em>6th-level Night Domain feature</em></p>
+            <p class="indent">At 6th level, you can use your Ward of Shadows feature whenever a creature you can see within 30 feet of you attacks a creature besides yourself.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+
+    <element name="Veil of Dreams" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_VEIL_OF_DREAMS">
+		<description>
+			<p><em>8th-level Night Domain feature</em></p>
+			<p class="indent">When you reach 8th level, you gain mastery over magical sleep. When you cast the <em>sleep</em> spell, add your cleric level to the dice you roll to determine how many hit points of creatures the spell can affect.</p>
+            <p class="indent">You may choose the order in which creatures within the spell’s area are affected. If the first target chosen has too many hit points to be affected, the spell will instead target the next creature you have chosen that the spell could affect before affecting other targets.</p>
+            <p class="indent">Additionally, any creature you put to sleep cannot be woken until the start of your next turn. Otherwise, the sleep spell acts as normal.</p>
+		</description>
+		<sheet action="Cast" usage="Sleep Spell">
+			<description>Add {{level:cleric}} to the dice you roll to determine how many HP of creatures <em>sleep</em> can affect. You may choose the order in which creatures are affected by <em>sleep</em>. Any creature you put to sleep cannot be woken until the start of your next turn. Otherwise, the spell acts as normal.</description>
+		</sheet>
+	</element>
+
+    <element name="Creature of the Night" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_CREATURE_OF_THE_NIGHT">
+        <description>
+            <p><em>17th-level Night Domain feature</em></p>
+            <p class="indent">Starting at 17th level, you can use your action to activate a supernatural aura of deep night. It lasts for 1 minute, or until you dismiss it using another action. You emit heavily obscuring darkness in a 30-foot radius and lightly obscuring shadows 50 feet beyond that. The darkness and shadows overlap and smother existing sources of light. Only light produced by a 9th level spell or similarly powerful effect can negate the darkness and shadows.</p>
+            <p class="indent">Enemies within the shadows constantly feel the presence of hungry predators watching them, and become frightened as long as they remain inside the affected area. Enemies in the darkness are both blinded and frightened for as long as they remain within its area.</p>
+        </description>
+        <sheet action="Action">
+            <description>Activate an aura of deep night. It lasts for 1 minute or until you dismiss it with another action. You emit a 30ft radius of darkness, and dim shadows for 50ft beyond that. Existing light sources are smothered; only light from a 9th level spell or similar power can negate this darkness. Enemies in the darkness are blinded and frightened while inside. Enemies in the shadows are frightened while inside.</description>
+        </sheet>
+    </element>
+</elements>

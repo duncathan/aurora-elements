@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.1.0">
+            <file name="bard-road.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/bard-road.xml" />
+        </update>
+    </info>
+    
+    <element name="College of the Road" type="Archetype" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_BARD_ROAD">
+        <supports>Bard College</supports>
+        <description>
+            <p class="indent">Not an officially recognized college, the College of the Road represents the personal and eclectic sets of skills, knowledge, and techniques a wandering bard picks up along their journey. As inveterate jacks-of-all-trades, bards possess a variety of aptitudes in combat, magecraft, and general know-how, making them particularly well suited to learning a variety of different skills. It often happens that while traveling, a bard winds up sharing their campfire with a motley assortment of wandering adventurers who may impart valuable lessons in exchange for a lively song or a well-told tale. Compared to students of other Bard Colleges, a special kind of sensibility is important for the College of the Road. How effectively a bard of this College can apply what they have learned depends on their understanding and insight. The College of the Road is sometimes a harsh teacher, but bards who follow this path often find themselves rewarded with a diverse array of useful tricks and tactics. Those who underestimate a bard from the College of the Road soon find that these “graduates” are full of surprises.</p>
+            <h5 class="caption">College of the Road Features</h5>
+            <table>
+                <thead>
+                    <tr><td>Bard Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>3rd</td><td>Bonus Proficiencies, Wanderer’s Lore, Traveler’s Tricks (2 options)</td></tr>
+                <tr><td>6th</td><td>Favorite Trick (1st), Improved Tricks, Traveler’s Tricks (3 options)</td></tr>
+                <tr><td>14th</td><td>Favorite Trick (2nd), Improved Tricks, Traveler’s Tricks (4 options)</td></tr>
+            </table>
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_WANDERERS_LORE" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_TRAVELERS_TRICKS" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_IMPROVED_TRICKS" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_FAVORITE_TRICK" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Class Feature" id="HPP_WOOD_CLASS_FEATURE_DARK_BARGAIN_INVOCATION_WRAPPER" requirements="ID_HPP_WOOD_ARCHETYPE_FEATURE_DARK_BARGAIN" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES" level="3" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_WANDERERS_LORE" level="3" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_TRAVELERS_TRICKS" level="3" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_IMPROVED_TRICKS" level="6" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_FAVORITE_TRICK" level="6" />
+        </rules>
+    </element>
+
+    <element name="Selected Invocation (Dark Bargain)" type="Class Feature" source="Humblewood" id="HPP_WOOD_CLASS_FEATURE_DARK_BARGAIN_INVOCATION_WRAPPER">
+        <!-- there was some wacky bug with nesting features on the sheet that i couldn't figure out -->
+        <!-- this is a total hack but it makes it look... almost acceptable on the sheet -->
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+        <rules>
+            <select type="Class Feature" name="Eldritch Invocation (Dark Bargain)" supports="Eldritch Invocation" />
+        </rules>
+    </element>
+    
+    <element name="Bonus Proficiencies" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES">
+        <description>
+            <p><em>3rd-level College of the Road feature</em></p>
+            <p class="indent">When you join the College of the Road at 3rd level, you gain a few useful proficiencies picked up from your time on the road. Choose three of the following options (each option can only be selected once):</p>
+            <ul>
+                <li>You gain proficiency with a gaming set of your choice</li>
+                <li>You gain proficiency with a martial weapon of your choice</li>
+                <li>You gain proficiency with herbalism kits</li>
+                <li>You gain proficiency with thieves’ tools</li>
+                <li>You gain proficiency with a skill of your choice</li>
+                <li>You learn two languages of your choice</li>
+            </ul>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Archetype Feature" name="Bonus Proficiencies" supports="College of the Road Proficiencies" number="3" />
+        </rules>
+    </element>
+    <element name="Any Gaming Set" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES_GAMING_SET">
+        <supports>College of the Road Proficiencies</supports>
+        <description />
+        <sheet display="false" />
+        <compendium display="false" />
+        <rules>
+            <select type="Proficiency" name="Gaming Set Proficiency (College of the Road)" supports="Gaming Set" />
+        </rules>
+    </element>
+    <element name="Any Martial Weapon" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES_MARTIAL_WEAPON">
+        <supports>College of the Road Proficiencies</supports>
+        <description />
+        <sheet display="false" />
+        <compendium display="false" />
+        <rules>
+            <select type="Proficiency" name="Martial Weapon Proficiency (College of the Road)" supports="Martial" />
+        </rules>
+    </element>
+    <element name="Herbalism Kit" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES_HERBALISM_KIT">
+        <supports>College of the Road Proficiencies</supports>
+        <description />
+        <sheet display="false" />
+        <compendium display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+        </rules>
+    </element>
+    <element name="Thieves’ Tools" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES_THIEVES_TOOLS">
+        <supports>College of the Road Proficiencies</supports>
+        <description />
+        <sheet display="false" />
+        <compendium display="false" />
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+        </rules>
+    </element>
+    <element name="Any Skill" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES_SKILL">
+        <supports>College of the Road Proficiencies</supports>
+        <description />
+        <sheet display="false" />
+        <compendium display="false" />
+        <rules>
+            <select type="Proficiency" name="Skill (College of the Road)" supports="Skill" />
+        </rules>
+    </element>
+    <element name="Any 2 Languages" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ROAD_BONUS_PROFICIENCIES_LANGUAGE">
+        <supports>College of the Road Proficiencies</supports>
+        <description />
+        <sheet display="false" />
+        <compendium display="false" />
+        <rules>
+            <select type="Language" name="Language (College of the Road)" supports="Standard||Exotic" number="2" />
+        </rules>
+    </element>
+
+    <element name="Wanderer’s Lore" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_WANDERERS_LORE">
+        <description>
+            <p><em>3rd-level College of the Road feature</em></p>
+            <p class="indent">At 3rd level, you can share any useful tidbits of information you have come across in your travels to help others to see problems from a new angle. While a creature has a Bardic Inspiration die from you they may choose to roll with advantage on a single Arcana, History, Nature, or Religion skill check. The creature may choose whether or not to add the Bardic Inspiration die to this roll.</p>
+        </description>
+        <sheet>
+            <description>While a creature has a Bardic Inspiration die from you they may choose to roll with advantage on a single Arcana, History, Nature, or Religion check. They may choose whether to add the Bardic Inspiration die to this roll.</description>
+        </sheet>
+    </element>
+
+    <element name="Traveler’s Tricks" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_TRAVELERS_TRICKS">
+        <description>
+            <p><em>3rd-level College of the Road feature</em></p>
+            <p class="indent">At 3rd level you already have several memorable experiences from your life on the road. You learn two Traveler’s Tricks of your choice (see Traveler’s Trick Options).</p>
+            <p class="indent">These Traveler’s Tricks represent skills, techniques, and useful pieces of knowledge picked up along the way. Each one requires you to expend a use of your Bardic Inspiration, and takes a bonus action to use unless otherwise specified.</p>
+            <p class="indent">Unlike traditional bard abilities which rely on skill or panache to be properly executed, the greatest asset for picking up tricks along the road is common sense and an openness to learning new ideas. Wisdom affects how powerful your traveler’s tricks are, as well as how hard they are to counter. If an option requires a saving throw, your Traveler’s Trick save DC equals 8 + your proficiency bonus + your Wisdom modifier.</p>
+            <p class="indent">At 6th level and at 14th level you learn an additional Traveler’s Trick.</p>
+        </description>
+        <sheet>
+            <description></description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Traveler’s Tricks (3rd level)" supports="Traveler Trick" level="3" number="2" />
+            <select type="Archetype Feature" name="Traveler’s Tricks (6th level)" supports="Traveler Trick" level="6" />
+            <select type="Archetype Feature" name="Traveler’s Tricks (14th level)" supports="Traveler Trick" level="14" />
+
+            <stat name="travelers trick:modifier" value="wisdom:modifier" bonus="modifier" />
+            <stat name="travelers trick:modifier" value="1" bonus="modifier" />
+
+            <stat name="travelers trick:dc" value="8" bonus="base" />
+            <stat name="travelers trick:dc" value="proficiency" bonus="proficiency" />
+            <stat name="travelers trick:dc" value="travelers trick:modifier" bonus="modifier" />
+        </rules>
+    </element>
+
+    <element name="Improved Tricks" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_IMPROVED_TRICKS">
+        <description>
+            <p><em>6th-level College of the Road feature</em></p>
+            <p class="indent">At 6th and 14th levels, your Traveler's Tricks become stronger. By practicing the tricks you know, and encountering stronger adventurers who share their knowledge with you, your mastery over your tricks increases.</p>
+        </description>
+        <sheet display="false" />
+    </element>
+
+    <element name="Favorite Trick" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_FAVORITE_TRICK">
+        <description>
+            <p><em>3rd-level College of the Road feature</em></p>
+            <p class="indent">At 6th level, you have gained enough mastery over one of your Traveler’s Tricks that you can use it whenever it’s needed. You may choose one Traveler’s Trick that you know and designate it as your favorite trick. If you roll initiative and have no uses of Bardic Inspiration remaining, you regain one use of it. Any Bardic Inspiration gained in this way can only be used to perform your favorite trick.</p>
+            <p class="indent">At 14th level you can select a second favorite trick from among Traveler’s Tricks you know.</p>
+        </description>
+        <sheet>
+            <description>If you roll initiative and have no uses of Bardic Inspiration remaining, you regain one use of it. Bardic Inspiration gained in this way can only be used to perform a favorite trick.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Favorite Trick (1st)" supports="Favorite Trick" />
+            <select type="Archetype Feature" name="Favorite Trick (2nd)" supports="Favorite Trick" level="14" />
+        </rules>
+    </element>
+
+    <!-- Traveler's Tricks -->
+    <element name="Acrobatics Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ACROBATICS_LESSONS">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">A slick rogue once gave you some pointers on zigging and zagging. When you or an ally makes a Dexterity saving throw, you may expend one use of your Bardic Inspiration, rolling a Bardic Inspiration die and adding the result to the saving throw. An ally must be within 60 feet of you and able to see and hear you to benefit from this trick.</p>
+            <p class="indent">At 6th level, if the target succeeds the saving throw against an effect that would deal half damage on a successful save, the target takes no damage instead.</p>
+            <p class="indent">At 14th level, even if the target fails their saving throw they only take half damage from the effect.</p>
+        </description>
+        <sheet action="Reaction">
+            <description>When you or an ally within 60 feet who can see or hear you makes a Dexterity saving throw, expend one use of your Bardic Inspiration, adding 1d{{bardic-inspiration:dice}} to the result to the saving throw.</description>
+            <description level="6">When you or an ally within 60 feet who can see or hear you makes a Dexterity saving throw, expend one use of your Bardic Inspiration, adding 1d{{bardic-inspiration:dice}} to the result to the saving throw. If the target succeeds against an effect that deals half damage on a successful save, they take no damage instead.</description>
+            <description level="14">When you or an ally within 60 feet who can see or hear you makes a Dexterity saving throw, expend one use of your Bardic Inspiration, adding 1d{{bardic-inspiration:dice}} to the result to the saving throw. If the target succeeds against an effect that deals half damage on a successful save, they take no damage instead. If they fail the saving throw, they take half damage instead.</description>
+        </sheet>
+    </element>
+    <element name="Favorite Trick: Acrobatics Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ACROBATICS_LESSONS_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_ACROBATICS_LESSONS</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Armed Combat Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">A seasoned fighter taught you how to use a simple combat stance to wield your weapons more effectively. When you select this option, choose from the following Fighting Styles:</p>
+            <ul>
+                <li>Archery: you gain a +2 bonus to attack rolls you make with ranged weapons.</li>
+                <li>Dueling: when you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</li>
+                <li>Great Weapon Fighting: when you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.</li>
+                <li>Two-Weapon Fighting: when you engage in two-weapon fighting, you can add your ability modifier.</li>
+            </ul>
+            <p class="indent">When you make a weapon attack, you can expend one use of your Bardic Inspiration, adding your Bardic Inspiration die to the attack or damage roll. When you do this, you gain the benefits of your chosen Fighting Style for 10 minutes.</p>
+            <p class="indent">At 6th level, you learn how to use your stance to chain your attacks together in deadly combination. Once, while your Fighting Style is active, you may attack twice, instead of once, when taking the Attack action on your turn.</p>
+            <p class="indent">At 14th level you have learned to shore up any weaknesses in your stance. You gain +1 to your AC for the effect’s duration.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>When you make a weapon attack, expend one use of Bardic Inspiration, adding 1d{{bardic-inspiration:dice}} to the attack or damage roll. When you do, you gain this benefit for 10 minutes: {{armed combat lessons:style}}</description>
+            <description level="6">When you make a weapon attack, expend one use of Bardic Inspiration, adding 1d{{bardic-inspiration:dice}} to the attack or damage roll. When you do, you gain this benefit for 10 minutes: {{armed combat lessons:style}}
+            Also, once while the effect is active, you may attack twice instead of once when taking the Attack action.</description>
+            <description level="14">When you make a weapon attack, expend one use of Bardic Inspiration, adding 1d{{bardic-inspiration:dice}} to the attack or damage roll. When you do, you gain this benefit for 10 minutes: {{armed combat lessons:style}} You also gain +1 to your AC.
+            Also, once while the effect is active, you may attack twice instead of once when taking the Attack action.</description>
+        </sheet>
+        <rules>
+            <select type="Archetype Feature" name="Fighting Style (Armed Combat Lessons)" supports="Armed Combat Lessons Fighting Style" />
+            <stat name="armed combat lessons:style" inline="true" value="NO FIGHTING STYLE SELECTED!" requirements="!ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_SELECTED" />
+        </rules>
+    </element>
+    <element name="Favorite Trick: Armed Combat Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+    <element name="Fighting Style Selected" type="Grants" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_SELECTED" />
+    <element name="Archery" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_ARCHERY">
+        <supports>Armed Combat Lessons Fighting Style</supports>
+        <description>
+            <p>You gain a +2 bonus to attack rolls you make with ranged weapons.</p>
+        </description>
+        <compendium display="false" />
+        <sheet display="false" />
+        <rules>
+            <grant type="Grants" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_SELECTED" />
+            <stat name="armed combat lessons:style" inline="true" value="You gain a +2 bonus to attack rolls you make with ranged weapons." />
+        </rules>
+    </element>
+    <element name="Dueling" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_DUELING">
+        <supports>Armed Combat Lessons Fighting Style</supports>
+        <description>
+            <p>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</p>
+        </description>
+        <compendium display="false" />
+        <sheet display="false" />
+        <rules>
+            <grant type="Grants" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_SELECTED" />
+            <stat name="armed combat lessons:style" inline="true" value="When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon." />
+        </rules>
+    </element>
+    <element name="Great Weapon Fighting" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_GREAT_WEAPON">
+        <supports>Armed Combat Lessons Fighting Style</supports>
+        <description>
+            <p>When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll. The weapon must have the two-handed or versatile property for you to gain this benefit.</p>
+        </description>
+        <compendium display="false" />
+        <sheet display="false" />
+        <rules>
+            <grant type="Grants" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_SELECTED" />
+            <stat name="armed combat lessons:style" inline="true" value="When you roll a 1 or 2 on a damage die for an attack you make with a two-handed or versatile melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2." />
+        </rules>
+    </element>
+    <element name="Two-Weapon Fighting" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_TWO_WEAPON">
+        <supports>Armed Combat Lessons Fighting Style</supports>
+        <description>
+            <p>When you engage in two-weapon fighting, you can add your ability modifier.</p>
+        </description>
+        <compendium display="false" />
+        <sheet display="false" />
+        <rules>
+            <grant type="Grants" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_ARMED_COMBAT_LESSONS_SELECTED" />
+            <stat name="armed combat lessons:style" inline="true" value="When you engage in two-weapon fighting, you can add your ability modifier." />
+        </rules>
+    </element>
+
+    <element name="Bind the Wound" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BIND_THE_WOUND">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">An experienced paladin instructed you in the basics of combat triage. When you or an ally within 5 feet of you receives healing of any kind, you may use your reaction to expend one use of your Bardic Inspiration and provide extra healing equal to the number on the Bardic Inspiration die roll + your Wisdom modifier (minimum of 1). You must have at least one hand free in order to quickly staunch the target's wound.</p>
+            <p class="indent">At 6th level, you have learned to identify a selection of useful herbs that you can carry with you. When providing additional healing with this trick you may also remove the poisoned or paralyzed condition from the target.</p>
+            <p class="indent">At 14th level, you have developed a true knack for emergency triage. You may additionally remove a single disease affecting the target of this ability.</p>
+        </description>
+        <sheet action="Reaction">
+            <description>When you or an ally within 5ft receives healing while you have one hand free: expend one use of your Bardic Inspiration and provide 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} extra healing.</description>
+            <description level="6">When you or an ally within 5ft receives healing while you have one hand free: expend one use of your Bardic Inspiration and provide 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} extra healing, and you may remove the poisoned or paralyzed condition from the target.</description>
+            <description level="14">When you or an ally within 5ft receives healing while you have one hand free: expend one use of your Bardic Inspiration and provide 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} extra healing, you may remove the poisoned or paralyzed condition from the target, and you may remove a disease from the target.</description>
+        </sheet>
+    </element>
+    <element name="Favorite Trick: Bind the Wound" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BIND_THE_WOUND_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_BIND_THE_WOUND</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Boxing Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BOXING_LESSONS">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">A wise monk was happy to share the basic form of the jab and weave. When you take the attack action, you can expend one use of your Bardic Inspiration to quickly execute two unarmed strikes against one or more creatures you could target. You may use Dexterity instead of Strength for the attack and damage rolls of these unarmed strikes. The damage die used for these unarmed strikes is the same as your Bardic Inspiration die.</p>
+            <p class="indent">At 6th level, you have finally mastered the “weave” portion of your technique. You do not provoke attacks of opportunity this turn.</p>
+            <p class="indent">At 14th level, your practice has paid off, granting you the use of a slightly ki-infused attack. When you hit with one of these attacks you may attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>When you attack, expend one use of your Bardic Inspiration to perform two unarmed strikes against one or more creatures. You may use Dexterity instead of Strength for the attack and damage rolls. The strikes deal 1d{{bardic-inspiration:dice}} bludgeoning damage.</description>
+            <description level="6">When you attack, expend one use of your Bardic Inspiration to perform two unarmed strikes against one or more creatures. You may use Dexterity instead of Strength for the attack and damage rolls. The strikes deal 1d{{bardic-inspiration:dice}} bludgeoning damage. You do not provoke attacks of opportunity this turn.</description>
+            <description level="14">When you attack, expend one use of your Bardic Inspiration to perform two unarmed strikes against one or more creatures. You may use Dexterity instead of Strength for the attack and damage rolls. The strikes deal 1d{{bardic-inspiration:dice}} bludgeoning damage. When you hit, the target must succeed on a DC{{travelers trick:dc}} Constitution saving throw or be stunned until the end of your next turn. You do not provoke attacks of opportunity this turn.</description>
+        </sheet>
+    </element>
+    <element name="Favorite Trick: Boxing Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BOXING_LESSONS_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_BOXING_LESSONS</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Conjure Woodland Spirit" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_CONJURE_WOODLAND_SPIRIT">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">A patient druid shared the secrets of forest magic with you. You can expend one use of your Bardic Inspiration as an action to conjure a forest guardian spirit in an unoccupied space you can see within 60 feet of you. The guardian spirit is Large, and takes the appearance of a spectral predatory cat. Any enemy that moves into or leaves a space adjacent to the guardian spirit must make a Wisdom saving throw, taking magical slashing damage equal to your Bardic Inspiration die on a failure. The guardian spirit will remain for as long as you concentrate on it, up to 10 minutes.</p>
+            <p class="indent">At 6th level, your bond with the guardian spirit grows even deeper. Any creature dealt damage by your guardian spirit has their speed reduced to 0 for the rest of the turn.</p>
+            <p class="indent">At 14th level, any Large or smaller creature who has their speed reduced to 0 by the guardian spirit is restrained for as long as you maintain your concentration, as your guardian spirit pins them in place. The target can break free by spending an action to make a Strength (Athletics) check against your Traveler's Trick save DC.</p>
+        </description>
+        <sheet action="Action">
+            <description>Expend one use of your Bardic Inspiration to conjure a Large guardian spirit with the appearance of a spectral predatory cat. Any enemy that moves into or leaves a space adjacent to the spirit must make a DC{{travelers trick:dc}} Wisdom saving throw, taking 1d{{bardic-inspiration:dice}} magical slashing damage on failure. The spirit will remain while you concentrate on it, up to 10 minutes.</description>
+            <description level="6">Expend one use of your Bardic Inspiration to conjure a Large guardian spirit with the appearance of a spectral predatory cat. Any enemy that moves into or leaves a space adjacent to the spirit must make a DC{{travelers trick:dc}} Wisdom saving throw, taking 1d{{bardic-inspiration:dice}} magical slashing damage on failure. Any creature damaged by the spirit has their speed reduced to 0 for the rest of the turn. The spirit will remain while you concentrate on it, up to 10 minutes.</description>
+            <description level="14">Expend one use of your Bardic Inspiration to conjure a Large guardian spirit with the appearance of a spectral predatory cat. Any enemy that moves into or leaves a space adjacent to the spirit must make a DC{{travelers trick:dc}} Wisdom saving throw, taking 1d{{bardic-inspiration:dice}} magical slashing damage on failure. Any creature damaged by the spirit has their speed reduced to 0 for the rest of the turn, and if they are Large or smaller, are restrained while the spirit remains. They can break free by spending an action to make a DC{{travelers trick:dc}} Strength (Athletics) check. The spirit will remain while you concentrate on it, up to 10 minutes.</description>
+        </sheet>
+    </element>
+    <element name="Favorite Trick: Conjure Woodland Spirit" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_CONJURE_WOODLAND_SPIRIT_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_CONJURE_WOODLAND_SPIRIT</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Dark Bargain" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_DARK_BARGAIN">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">You made a shady bargain with a haggard warlock. When you select this option, choose a Eldritch Invocation from the Warlock’s list of class features for which you meet the prerequisites. You can expend one use of your Bardic Inspiration to gain the benefits of this Dark Invocation for 10 minutes. Doing this requires you to roll your Bardic Inspiration die and take an amount of necrotic damage equal to the roll.</p>
+            <p class="indent">At 6th level, you have learned how to deepen your pact with the warlock you once met. You may choose to take double the necrotic damage you rolled on your Bardic Inspiration die to instead have the effect last for 1 hour.</p>
+            <p class="indent">At 14th level, your pact with the warlock unlocks frightening new power. When you reach 14th level, choose a single spell of 7th level or lower from the warlock’s spell list. You may cast the spell once during this effect without expending any spell slots, although you must cast it at the level of your highest spell slot. In exchange, the spell deals additional necrotic damage to you equal to twice the level at which it was cast.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>Expend one use of your Bardic Inspiration to gain the benefits of your chosen Eldritch Invocation for 10 minutes. You take 1d{{bardic-inspiration:dice}} necrotic damage.</description>
+            <description level="6">Expend one use of your Bardic Inspiration to gain the benefits of your chosen Eldritch Invocation for 10 minutes. You take 1d{{bardic-inspiration:dice}} necrotic damage. You may take double that damage to instead have the effect last for 1 hour.</description>
+            <description level="14">Expend one use of your Bardic Inspiration to gain the benefits of your chosen Eldritch Invocation for 10 minutes. You take 1d{{bardic-inspiration:dice}} necrotic damage. You may take double that damage to instead have the effect last for 1 hour.
+            You may cast your chosen warlock spell at level {{dark bargain:spell:level}} once during this effect without expending a spell slot. The spell deals {{dark bargain:spell:damage}} necrotic damage to you.</description>
+        </sheet>
+        <rules>
+            <!-- see HPP_WOOD_CLASS_FEATURE_DARK_BARGAIN_INVOCATION_WRAPPER -->
+            <select type="Spell" name="7th-level Spell (Dark Bargain)" supports="(1||2||3||4||5||6||7),Warlock" level="14" />
+            <!-- surely there's a better way to do this right -->
+            <stat name="dark bargain:spell:level" value="7" bonus="base" />
+            <stat name="dark bargain:spell:level" value="8" level="15" bonus="base" />
+            <stat name="dark bargain:spell:level" value="9" level="17" bonus="base" />
+
+            <stat name="dark bargain:spell:damage" value="dark bargain:spell:level" />
+            <stat name="dark bargain:spell:damage" value="dark bargain:spell:level" />
+        </rules>
+    </element>
+    <element name="Favorite Trick: Dark Bargain" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_DARK_BARGAIN_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_DARK_BARGAIN</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Evocation Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_EVOCATION_LESSONS">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">A venerable wizard shared secrets of evocation magic with you. When you select this option, choose a damage-dealing spell you can cast. You can expend one use of your Bardic Inspiration when you cast this spell to change the type of damage it deals to your choice of either acid, cold, fire, lightning, or thunder (chosen when you cast the spell). Add the number you roll on your Bardic Inspiration die + your Wisdom modifier (minimum of 1) to the damage dealt by the spell.</p>
+            <p class="indent">At 6th level you may choose to change the spell you had previously selected with this feature to another spell that you know.</p>
+            <p class="indent">At 14th level you may choose to change the spell you had previously selected with this feature to another spell that you know.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>When you took this trick, you chose a damage-dealing spell you can cast. Expend one use of your Bardic Inspiration when you cast that spell to change the type of damage it deals to either acid, cold, fire, lightning, or thunder. Add 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} to the spell's damage.</description>
+            <description level="6">When you took this trick, you chose a damage-dealing spell you can cast. (At 6th level, you may have replaced that spell with another.) Expend one use of your Bardic Inspiration when you cast that spell to change the type of damage it deals to either acid, cold, fire, lightning, or thunder. Add 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} to the spell's damage.</description>
+            <description level="14">When you took this trick, you chose a damage-dealing spell you can cast. (At 6th and 14th level, you may have replaced that spell with another.) Expend one use of your Bardic Inspiration when you cast that spell to change the type of damage it deals to either acid, cold, fire, lightning, or thunder. Add 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} to the spell's damage.</description>
+        </sheet>
+    </element>
+    <element name="Favorite Trick: Evocation Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_EVOCATION_LESSONS_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_EVOCATION_LESSONS</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Hunting Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_HUNTING_LESSONS">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">A skilled ranger taught you how to use your magic to pinpoint your quarry’ weak spots. You can expend one use of your Bardic Inspiration to target one creature you can see within 90 feet of you as your quarry. For as long as you concentrate on this ability, up to 1 hour, all weapon attacks you make against the target deal additional damage equal to your Bardic Inspiration die.</p>
+            <p class="indent">At 6th level, you have honed your skills to the point where you can easily track your quarry. For the duration of the effect, you are aware of your target’s approximate distance and direction from you, so long as you are on the same plane.</p>
+            <p class="indent">At 14th level, you can maintain this effect for up to 24 hours.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>Expend one use of your Bardic Inspiration to target one creature you can see within 90ft. As long as you concentrate on this ability, up to {{hunting lessons:duration}}, all weapon attacks you make against the target deal 1d{{bardic-inspiration:dice}} additional damage{{hunting lessons:locate}}.</description>
+        </sheet>
+        <rules>
+            <stat name="hunting lessons:duration" inline="true" value="1 hour" />
+            <stat name="hunting lessons:duration" inline="true" value="24 hours" level="14" />
+            <stat name="hunting lessons:locate" inline="true" value="" />
+            <stat name="hunting lessons:locate" inline="true" value=", and you are aware of your target’s approximate distance and direction from you when on the same plane" level="6" />
+        </rules>
+    </element>
+    <element name="Favorite Trick: Hunting Lessons" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_HUNTING_LESSONS_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_HUNTING_LESSONS</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Reckless Tactics" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_RECKLESS_TACTICS">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">You learned from a hardened barbarian that sometimes you have to charge into combat with no regard for your own safety. When you make an attack with a melee weapon that has either the heavy, two handed, or versatile quality, you can expend one use of your Bardic Inspiration to gain advantage on the attack. Add the number you roll on your Bardic Inspiration die + your Wisdom modifier (minimum of 1) to the attack’s damage roll. Attacks made against you this round have advantage.</p>
+            <p class="indent">At 6th level you have learned, through practice, how to push your offense even further. You may impose a -5 penalty to this attack roll. If the attack hits, you add +10 to the attack’s damage.</p>
+            <p class="indent">At 14th level, your experience has taught you how to really go all in. If you have not moved this turn, you may voluntarily reduce your speed to 0 until your next turn to resolve this attack against any number of creatures within 5 feet of you, making a separate attack roll for each target.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>When you make an attack with a melee attack that is heavy, two-handed, or versatile: expend one use of your Bardic Inspiration to gain advantage on the attack. Add 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} to the damage roll. Attacks made against you this round have advantage.</description>
+            <description level="6">When you make an attack with a melee attack that is heavy, two-handed, or versatile: expend one use of your Bardic Inspiration to gain advantage on the attack. Add 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} to the damage roll. You may impose a -5 penalty to the attack roll: if you do, add +10 to the attack's damage. Attacks made against you this round have advantage.</description>
+            <description level="14">When you make an attack with a melee attack that is heavy, two-handed, or versatile: expend one use of your Bardic Inspiration to gain advantage on the attack. Add 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} to the damage roll. You may impose a -5 penalty to the attack roll: if you do, add +10 to the attack's damage. If you have not moved this turn, you may reduce your speed to 0 until your next turn to resolve this attack against any number of creatures within 5ft, making a separate attack roll for each. Attacks made against you this round have advantage.</description>
+        </sheet>
+    </element>
+    <element name="Favorite Trick: Reckless Tactics" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_RECKLESS_TACTICS_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_RECKLESS_TACTICS</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+
+    <element name="Warding Trick" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_WARDING_TRICK">
+        <supports>Traveler Trick</supports>
+        <description>
+            <p class="indent">A gentle cleric taught you how to channel your magic into a protective veil. You can expend one use of your Bardic Inspiration as an action to grant an ally you can see within 60 feet of you a number of temporary hit points equal to your roll on the Bardic Inspiration die + your Wisdom modifier (minimum of 1). This ward lasts for as long as you maintain concentration on it, up to 10 minutes.</p>
+            <p class="indent">At 6th level, your practice allows you to weave wards that retaliate against those who would harm your allies. Any creature who deals damage to an ally with temporary hit points granted by this effect must make a Wisdom saving throw. On a failure, the creature dealing damage takes an amount of radiant damage equal to your Bardic Inspiration die.</p>
+            <p class="indent">At 14th level, you have learned how to make your ward even more resilient. For the duration of the effect, at the beginning of each round on your turn the target gains a number of temporary hit points equal to your Bardic Inspiration die + your Wisdom modifier (minimum of 1). These replace any previous temporary hit points.</p>
+        </description>
+        <sheet action="Action">
+            <description>Expend one use of your Bardic Inspiration to grant an ally you can see within 60ft of you 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} temporary HP. This ward lasts while you maintain concentration on it, up to 10 minutes.</description>
+            <description>Expend one use of your Bardic Inspiration to grant an ally you can see within 60ft of you 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} temporary HP. This ward lasts while you maintain concentration on it, up to 10 minutes. Any creature who deals damage to a warded ally must make a DC{{travelers trick:dc}} Wisdom saving throw. On failure, the attacker takes 1d{{bardic-inspiration:dice}} radiant damage.</description>
+            <description>Expend one use of your Bardic Inspiration to grant an ally you can see within 60ft of you 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} temporary HP. At the beginning of each round on your turn, the warded ally gains 1d{{bardic-inspiration:dice}} + {{travelers trick:modifier}} temporary HP. This ward lasts while you maintain concentration on it, up to 10 minutes. Any creature who deals damage to a warded ally must make a DC{{travelers trick:dc}} Wisdom saving throw. On failure, the attacker takes 1d{{bardic-inspiration:dice}} radiant damage.</description>
+        </sheet>
+    </element>
+    <element name="Favorite Trick: Warding Trick" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_WARDING_TRICK_FAVORITE">
+        <supports>Favorite Trick</supports>
+        <requirements>ID_HPP_WOOD_ARCHETYPE_FEATURE_WARDING_TRICK</requirements>
+        <description />
+        <compendium display="false" />
+        <sheet>
+            <description />
+        </sheet>
+    </element>
+</elements>

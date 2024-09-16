@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Source</name>
+        <update version="0.1.0">
+            <file name="source.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/source.xml" />
+        </update>
+    </info>
+    <element name="Humblewood" type="Source" source="Humblewood" id="ID_HPP_WOOD_SOURCE_HUMBLEWOOD">
+        <description>
+            <p><strong>Play as woodland creatures in this grand adventure to fight the fires threatening all of Humblewood!</strong></p>
+            <p>The world of Everden is vast, and filled with magic, mystery, and adventure. It is home to people who resemble the birds and animals of our world. Our story begins in one corner of this world, a land called Humblewood.</p>
+            <p>In the world of Everden, nestled between the mighty Crest mountain range and the vast marshes of the Mokk Fields, lies a mystical forest known as Humblewood that hums with the Great Rhythm of nature. It has been ruled for generations by the birdfolk who inhabit the Great Tree-City of Alderheart. Humblewood has endured for centuries thanks to the industry and compassion of its people...</p>
+            <p>...but now the fires have come, and the Woods have been thrown into chaos. Flames ravage the land and destroy the homes of the humblefolk, stoking a growing resentment against the birdfolk, whose cities have managed to avoid the worst of the fires so far. Hatred burns in the hearts of those who have lost lives they cherished, and these once peaceful peoples now take up the sword and turn to banditry. The disaffected turn their gaze on Alderheart, and threaten to reduce an age of peace to ashes...</p>
+            <p>...yet there is still hope. Even in these dark times, brave heroes can be found within the Wood. Only they can quell the raging flames that have been unleashed upon the land, and restore balance to the realm.</p>
+            <p><strong>Will you answer the call?</strong></p>
+            <ul>
+                <li>Over 200 pages</li>
+                <li>Full adventure from level 1 to 5</li>
+                <li>10 new playable races</li>
+                <li>New Backgrounds, Feats, and Spells</li>
+                <li>Full Bestiary</li>
+            </ul>
+        </description>
+        <setters>
+            <set name="abbreviation">WOOD</set>
+            <set name="url">https://humblewood.com</set>
+            <set name="image">https://cdn.shopify.com/s/files/1/0002/1033/7850/products/humblewoodPDF_2000x2000.png?v=1572292887</set>
+            <set name="author" abbreviation="HPP" url="https://hitpointpress.com">Hit Point Press</set>
+            <set name="third-party">true</set>
+            <set name="release">20190924</set>
+        </setters>
+    </element>
+</elements>

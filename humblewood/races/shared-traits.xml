@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Shared Racial Traits</name>
+        <update version="0.1.0">
+            <file name="shared-traits.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/shared-traits.xml" />
+        </update>
+    </info>
+    
+    <element name="Glide" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_GLIDE">
+        <description>
+            <p>Using your feathered arms, you can slow your fall, and glide short distances. When falling you can use your reaction to spread your arms, stiffen your wing feathers, and slow your descent. While doing so, you continue to fall gently at a speed of 60 feet per round, taking no fall damage when you land. If you would fall at least 10 feet in this way, you may fly up to your movement speed in one direction you choose, although you cannot choose to move upwards, landing in the space you finish your movement. You cannot glide while carrying heavy weapons or wielding a shield (though you may drop any held items as part of your reaction to spread your arms). You cannot glide while wearing heavy armor, or if you are encumbered.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Racial Trait" id="ID_HPP_WOOD_RACIAL_TRAIT_GLIDE_NORMAL" requirements="!ID_HPP_WOOD_FEAT_HEAVY_GLIDER" />
+            <grant type="Racial Trait" id="ID_HPP_WOOD_RACIAL_TRAIT_GLIDE_HEAVY_GLIDER" requirements="ID_HPP_WOOD_FEAT_HEAVY_GLIDER" />
+        </rules>
+    </element>
+    <element name="Glide (Default)" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_GLIDE_NORMAL">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Glide" action="Reaction" usage="While Falling">
+            <description>You fall at a speed of 60ft/round, taking no fall damage. If you would fall at least 10ft, you may fly up to your movement speed in one direction you choose. You cannot glide while carrying heavy weapons, wielding a shield, wearing heavy armor, or encumbered. You may drop any held items as part of your reaction.</description>
+        </sheet>
+    </element>
+    <element name="Wing Flap" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_WING_FLAP">
+        <description>
+            <p>As a bonus action, you can use your powerful feathered arms to propel yourself upward a distance equal to half your movement speed. You can use it in conjunction with a regular jump, but not while gliding.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>Propel yourself upwards a distance of half your movement speed. Cannot perform while Gliding.</description>
+        </sheet>
+    </element>
+    <element name="Talons" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_TALONS">
+        <description>
+            <p>Your sharp claws aid you in unarmed combat and while climbing. Your damage for an unarmed strike is 1d4 piercing damage. Additionally, you have advantage on Strength (Athletics) checks made to climb any surface your talons could reasonably grip.</p>
+        </description>
+        <sheet>
+            <description>Your damage for an unarmed strike is 1d4 piercing damage. You have advantage on Strength (Athletics) checks made to climb a surface with your talons.</description>
+        </sheet>
+    </element>
+
+    <element name="Resilience" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_RESILIENCE">
+        <description>
+            <p>You have advantage on saving throws against poison and resistance against poison damage.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against poison.</description>
+        </sheet>
+        <rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+    </element>
+    <element name="Swift" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_SWIFT">
+        <description>
+            <p>Your base walking speed increases to 35 feet.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="innate speed" value="35" bonus="base" />
+        </rules>
+    </element>
+    <element name="Standing Leap" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_STANDING_LEAP">
+        <description>
+            <p>Your base long jump is 30 feet, and your base high jump is 15 feet, with or without a running start.</p>
+        </description>
+        <sheet>
+            <description>Your base long jump is 30 feet, and your base high jump is 15 feet, with or without a running start.</description>
+        </sheet>
+    </element>
+    <element name="Skulker" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_SKULKER">
+        <description>
+            <p>You have advantage on Dexterity (Stealth) checks made in dim light or darkness.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on Dexterity (Stealth) checks made in dim light or darkness.</description>
+        </sheet>
+    </element>
+</elements>

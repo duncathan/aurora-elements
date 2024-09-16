@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Vulpin</name>
+        <update version="0.1.0">
+            <file name="race-vulpin.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-vulpin.xml" />
+        </update>
+    </info>
+    
+    <element name="Vulpin" type="Race" source="Humblewood" id="ID_HPP_WOOD_RACE_VULPIN">
+        <description>
+            <p class="indent">Vulpins are fox-like in appearance, with light builds and sharp fangs. One of the least understood and most often vilified humblefolk in the Wood, vulpins have earned a bad reputation that isn’t entirely deserved. Much of this stems from the fact that vulpins are ambitious. Sometimes their drive to succeed can make it difficult for them to empathize with others. Vulpins feel just as deeply as other folk of the Wood, but they possess a keen survival instinct which sometimes causes them to take courses of action that are selfish. Moreover, they are sharp and savvy, possessing an uncanny force of personality that allows them to easily sway the trust of others. In the right situations, vulpins can be true friends, and in the wrong ones, deadly enemies.</p>
+            <h4>Artful and Cunning</h4>
+            <p></p>
+            <p class="indent">Vulpins are naturally intelligent, rivalled only by corvums. However, where corvums are studious, vulpins are more creative. They enjoy the arts and the pursuit of leisure. Some devote their lives to mastering an art form; learning sculpture, poetry, or refined swordplay. Even though vulpins come from every walk of life, they also have a reputation for being snobbish and looking down on others.</p>
+            <p class="indent">All vulpins have a natural connection to the magic of the Wood, though they channel it in specialized ways. The right look from a vulpin can bewitch or terrify, and vulpins who are truly skilled can command an entire room through sheer force of presence.</p>
+            <h4>Prodigious Predators</h4>
+            <p></p>
+            <p class="indent">Before the Humblefolk Treaty was signed, vulpins controlled a large part of the Wood outside the influence of the birdfolk, and bands of vulpin raiders provided their own kin with a wealth of plundered goods at the expense of birdfolk and other humblefolk alike. Those days are long since gone, but the memory of the sinister vulpin has yet to fade from the minds of the humblefolk, who endured great suffering at their hands.</p>
+            <p class="indent">A few vulpins have attempted to change public opinion, but the majority are unconcerned with their notoriety. Vulpins learn from a young age that they are of two natures: the sophisticated and the savage. While sophistication and elegance are generally preferred, it is considered common sense that vulpins should know when to keep their fangs hidden and when to bear them.</p>
+            <h4>Vulpin Traits</h4>
+            <p></p>
+            <p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2, and your Charisma score increases by 1.</p>
+            <p class="indent"><strong><em>Age.</em></strong> Vulpins mature at an average pace, and can be comparatively long-lived. They reach adulthood at 15 years, and live well past 90 years.</p>
+            <p class="indent"><strong><em>Alignment.</em></strong> Vulpins aren’t innately evil, but their difficulty empathizing with others means they are only rarely good aligned. Most vulpins find strict authority distasteful, preferring chaotic alignments over lawful ones.</p>
+            <p class="indent"><strong><em>Size.</em></strong> Vulpins cut dashing figures and are usually lean and muscular. They stand between 4 and a half and 5 and a half feet tall, but are relatively lightweight, weighing between 90 and 140 pounds. Your size is Medium.</p>
+            <p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+            <p class="indent"><strong><em>Darkvision.</em></strong> You are adept at hunting at night. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>
+            <p class="indent"><strong><em>Bite.</em></strong> You have sharp fangs that enable you to make natural bite attacks. You can choose to bite as an unarmed strike that deals 1d6 points of piercing damage, which can be calculated using either your Strength or Dexterity modifier for both the attack roll and damage bonus.</p>
+            <p class="indent"><strong><em>Evasive.</em></strong> You add your Intelligence modifier as a bonus on all Dexterity saving throws.</p>
+            <p class="indent"><strong><em>Bewitching Guile.</em></strong> You can cast <em>charm person</em> as a 1st level spell with this trait, and regain the ability to do so when you finish a long rest. When you reach 3rd level, you can cast <em>ambush prey</em> as a 2nd level spell with this trait, and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast <em>fear</em> with this trait, and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+            <p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Birdfolk and Vulpin.</p>
+        </description>
+        <sheet display="false" />
+        <setters>
+            <set name="names" type="male">Benji, Cryx, Drake, Endo, Fletcher, Harlock, Iggy, Jorn, Kale, Lorvis, Morgi, Nalu, Oakly, Perry, Quinn, Ricker, Sanford, Talwyn, Wilson, Zeke</set>
+            <set name="names" type="female">Asandra, Bruna, Cherri, Corri, Dreya, Elsbeth, Greta, Henrietta, Imelda, Kaja, Luma, Mira, Naya, Ophelia, Penny, Riette, Serra, Tawny, Ula, Zelda</set>
+            <set name="names" type="family">Bitterbloom, Cannuk, Figgins, Ghaddie, Gravewind, Hannington, Hawksburg, Hillshaw, Mokker, Oleander, Quartz, Revayne, Sprigg, Sundapple, Torring, Uxbridge, Voss, Woffletstone, Yarrow, Zephyr</set>
+			<set name="names-format">{{name}} {{family}}</set>
+			<set name="height" modifier="2d8">4'5"</set>
+			<set name="weight" modifier="1d4">90 lb.</set>
+		</setters>
+        <rules>
+            <stat name="intelligence" value="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="charisma" value="1" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <select type="Ability Score Improvement" name="Custom Ability Score Improvement +2 (Vulpin)" supports="Custom Ability Score Increase 2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+			<select type="Ability Score Improvement" name="Custom Ability Score Improvement +1 (Vulpin)" supports="Custom Ability Score Increase 1" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_ASI" />
+            <stat name="innate speed" value="30" bonus="base" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_HPP_WOOD_OPTION_HUMBLEWOOD_CAMPAIGN&amp;&amp;!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <grant type="Language" id="ID_HPP_WOOD_LANGUAGE_BIRDFOLK" requirements="ID_HPP_WOOD_OPTION_HUMBLEWOOD_CAMPAIGN&amp;&amp;!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <grant type="Language" id="ID_HPP_WOOD_LANGUAGE_CERVAN" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Customized Language" supports="Custom Race Language" number="2" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <grant type="Racial Trait" id="ID_HPP_WOOD_RACIAL_TRAIT_BITE" />
+            <grant type="Racial Trait" id="ID_HPP_WOOD_RACIAL_TRAIT_EVASIVE" />
+            <grant type="Racial Trait" id="ID_HPP_WOOD_RACIAL_TRAIT_BEWITCHING_GUILE" />
+        </rules>
+    </element>
+    <element name="Bite" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_BITE">
+        <description>
+            <p>You have sharp fangs that enable you to make natural bite attacks. You can choose to bite as an unarmed strike that deals 1d6 points of piercing damage, which can be calculated using either your Strength or Dexterity modifier for both the attack roll and damage bonus.</p>
+        </description>
+        <sheet action="Action" usage="Unarmed Strike">
+            <description>Use your sharp fangs to bite, dealing 1d6 piercing damage. The modifier for the attack roll and damage bonus is {{bite:modifier}}.</description>
+        </sheet>
+        <rules>
+            <stat name="bite:modifier" value="strength:modifier" bonus="modifier" />
+            <stat name="bite:modifier" value="dexterity:modifier" bonus="modifier" />
+        </rules>
+    </element>
+    <element name="Evasive" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_EVASIVE">
+        <description>
+            <p>You add your Intelligence modifier as a bonus on all Dexterity saving throws.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="dexterity:save:misc" value="intelligence:modifier" />
+        </rules>
+    </element>
+    <element name="Bewitching Guile" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_BEWITCHING_GUILE">
+        <description>
+            <p>You can cast <em>charm person</em> as a 1st level spell with this trait, and regain the ability to do so when you finish a long rest. When you reach 3rd level, you can cast <em>ambush prey</em> as a 2nd level spell with this trait, and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast <em>fear</em> with this trait, and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for these spells.</p>
+            <div class="reference">
+                <div element="ID_PHB_SPELL_CHARM_PERSON" />
+            </div>
+            <div class="reference">
+                <div element="ID_HPP_WOOD_SPELL_AMBUSH_PREY" />
+            </div>
+            <div class="reference">
+                <div element="ID_PHB_SPELL_FEAR" />
+            </div>
+        </description>
+        <sheet display="false" />
+        <spellcasting name="Vulpin" ability="Intelligence">
+			<list>Wizard</list>
+		</spellcasting>
+        <rules>
+            <stat name="vulpin:spellcasting:slots:1" value="1" level="1" />
+            <stat name="vulpin:spellcasting:slots:2" value="1" level="3" />
+            <stat name="vulpin:spellcasting:slots:3" value="1" level="5" />
+            <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" spellcasting="Vulpin" level="1"/>
+            <grant type="Spell" id="ID_HPP_WOOD_SPELL_AMBUSH_PREY" spellcasting="Vulpin" level="3" />
+            <grant type="Spell" id="ID_PHB_SPELL_FEAR" spellcasting="Vulpin" level="5" />
+        </rules>
+    </element>
+</elements>

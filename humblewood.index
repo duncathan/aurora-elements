@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+	<info>
+		<name>Humblewood Campaign Setting</name>
+		<description>Play as woodland creatures in this grand adventure to fight the fires threatening all of Humblewood!</description>
+		<author url="https://hitpointpress.com">Hit Point Press</author>
+		<update version="0.1.0">
+			<file name="humblewood.index" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood.index" />
+		</update>
+	</info>
+	<files>	
+		<file name="source.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/source.xml" />
+		
+		<!-- races -->
+		<file name="race-cervan.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-cervan.xml" />
+		<file name="race-corvum.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-corvum.xml" />
+		<file name="race-gallus.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-gallus.xml" />
+		<file name="race-hedge.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-hedge.xml" />
+		<file name="race-jerbeen.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-jerbeen.xml" />
+		<file name="race-luma.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-luma.xml" />
+		<file name="race-mapach.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-mapach.xml" />
+		<file name="race-raptor.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-raptor.xml" />
+		<file name="race-strig.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-strig.xml" />
+		<file name="race-vulpin.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/race-vulpin.xml" />
+		<file name="shared-traits.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/shared-traits.xml" />
+
+		<!-- archetypes -->
+		<file name="bard-road.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/bard-road.xml" />
+		<file name="cleric-community.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/cleric-community.xml" />
+		<file name="cleric-night.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/cleric-night.xml" />
+		<file name="fighter-scofflaw.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/fighter-scofflaw.xml" />
+
+		<!-- backgrounds -->		
+		<file name="background-bandit-defector.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/backgrounds/background-bandit-defector.xml" />
+		<file name="background-grounded.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/backgrounds/background-grounded.xml" />
+		<file name="background-wind-touched.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/backgrounds/background-wind-touched.xml" />
+
+		<!-- misc -->
+		<file name="deities.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/deities.xml" />
+		<file name="feats.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/feats.xml" />
+		<file name="languages.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/languages.xml" />
+		<file name="magic-items.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/magic-items.xml" />
+		<file name="options.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/options.xml" />
+		<file name="spells.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/spells.xml" />
+	</files>
+</index>

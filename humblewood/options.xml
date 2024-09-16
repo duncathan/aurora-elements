@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Options</name>
+        <update version="0.1.0">
+            <file name="options.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/options.xml" />
+        </update>
+    </info>
+
+    <element name="Humblewood Campaign" type="Option" source="Humblewood" id="ID_HPP_WOOD_OPTION_HUMBLEWOOD_CAMPAIGN">
+        <description>
+            <p>Humblewood campaigns have some differences in the character creation process, particularly with languages.</p>
+        </description>
+        <setters>
+            <set name="short">Humblewood campaigns have some differences in the character creation process.</set>
+        </setters>
+    </element>
+</elements>

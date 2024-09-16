@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.1.0">
+            <file name="fighter-scofflaw.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/fighter-scofflaw.xml" />
+        </update>
+    </info>
+    
+    <element name="Scofflaw" type="Archetype" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FIGHTER_SCOFFLAW">
+        <supports>Martial Archetype</supports>
+        <description>
+            <p class="indent">A fighter who hits hard and fights dirty, the Scofflaw balks at the ideals of honour and tradition, doing what they need to survive. Rules are made to be broken, and the ScofHaw extends this logic to their fighting style. Using every trick at their disposal to gain the upper hand against their foes, the Scofflaw cows their enemy into submission, or overwhelms their defenses with a single cheap shot.</p>
+            <p class="indent">Scofflaws eventually trust their notorious reputation to do much of the work for them, gaining the ability to cause foes to quake with a single threat. Scofflaws are a diverse bunch that run the gamut from graceful yet deadly knaves to bruiser thugs. What ties them together is their belief that there’s no such thing as a bad win.</p>
+            <h5 class="caption">Scofflaw Features</h5>
+            <table>
+                <thead>
+                    <tr><td>Fighter Level</td><td>Feature</td></tr>
+                </thead>
+                <tr><td>3rd</td><td>Bonus Proficiency, Intimidating Banter, Brutal Brawler</td></tr>
+                <tr><td>7th</td><td>Misdirection</td></tr>
+                <tr><td>10th</td><td>Blindside, Brutal Brawler improvement</td></tr>
+                <tr><td>15th</td><td>Infamy, Blindside improvement</td></tr>
+                <tr><td>18th</td><td>Two For Flinching, Brutal Brawler improvement, Blindside improvement</td></tr>
+            </table>
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_SCOFFLAW_BONUS_PROFICIENCY" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_INTIMIDATING_BANTER" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_BRUTAL_BRAWLER" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_MISDIRECTION" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_BLINDSIDE" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_INFAMY" />
+            <div element="ID_HPP_WOOD_ARCHETYPE_FEATURE_TWO_FOR_FLINCHING" />
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_SCOFFLAW_BONUS_PROFICIENCY" level="3" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_INTIMIDATING_BANTER" level="3" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BRUTAL_BRAWLER" level="3" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_MISDIRECTION" level="7" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BLINDSIDE" level="10" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_INFAMY" level="15" />
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_TWO_FOR_FLINCHING" level="18" />
+        </rules>
+    </element>
+    
+    <element name="Bonus Proficiency" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_SCOFFLAW_BONUS_PROFICIENCY">
+        <description>
+            <p><em>3rd-level Scofflaw feature</em></p>
+			<p class="indent">When you choose this Martial Archetype at 3rd level, you gain proficiency in one of the following skills of your choice: Deception, Insight, Intimidation, Sleight of Hand, or Stealth. Alternatively, you may learn Thieves’ Cant.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Archetype Feature" name="Proficiency (Scofflaw)" supports="ID_HPP_WOOD_ARCHETYPE_FEATURE_SCOFFLAW_SKILL_PROFICIENCY|ID_HPP_WOOD_ARCHETYPE_FEATURE_SCOFFLAW_LANGUAGE" />
+        </rules>
+    </element>
+    <element name="Bonus Proficiency (Skill)" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_SCOFFLAW_SKILL_PROFICIENCY">
+        <description />
+        <compendium display="false" />
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency (Scofflaw)" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_SLEIGHT_OF_HAND|ID_PROFICIENCY_SKILL_STEALTH" />
+        </rules>
+    </element>
+    <element name="Bonus Proficiency (Language)" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_SCOFFLAW_LANGUAGE">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Thieves’ Cant">
+            <description>A secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves’ cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.
+			In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.</description>
+        </sheet>
+        <rules>
+            <grant type="Language" id="ID_WOTC_PHB_LANGUAGE_THIEVES_CANT" />
+        </rules>
+    </element>
+
+    <element name="Intimidating Banter" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_INTIMIDATING_BANTER">
+        <description>
+            <p><em>3rd-level Scofflaw feature</em></p>
+			<p class="indent">At 3rd level, you are adept at integrating insults and barbs into your fighting style. So long as you are in combat, you may choose to use Strength or Dexterity to make Charisma ability checks.</p>
+        </description>
+        <sheet>
+            <description>While in combat, you may choose to use Strength or Dexterity to make Charisma checks.</description>
+        </sheet>
+    </element>
+
+    <element name="Brutal Brawler" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BRUTAL_BRAWLER">
+        <description>
+            <p><em>3rd-level Scofflaw feature</em></p>
+			<p class="indent">At 3rd level, your tavernside scuffles have honed your ability to deal damage with just about anything that’s handy. You have proficiency with improvised weapons, and treat any improvised weapon you handle as if it has the finesse quality.</p>
+            <p class="indent">Additionally, whenever you hit with an improvised weapon, you may spend a bonus action to break it over your opponent. Doing this destroys the weapon, but deals the maximum number each of the weapon's damage dice could deal to the target. Any additional dice added to the attack’s damage roll are not affected by this ability.</p>
+            <p class="indent">At 10th level, the improvised weapons you wield become even more lethal in your hands. When you spend your bonus action to break an improvised weapon over your opponent, add an additional 2d6 to the weapon's base damage dice.</p>
+            <p class="indent">At 18th level, you roll all attacks made with improvised weapons with advantage.</p>
+        </description>
+        <sheet>
+            <description>You have proficiency with improvised weapons. Improvised weapons you handle have Finesse.</description>
+            <description level="18">You have proficiency with improvised weapons. Improvised weapons you handle have Finesse. You have advantage on attack rolls made with improvised weapons.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BRUTAL_BRAWLER_BONUS_ACTION" />
+            <!-- TODO: grant improvised weapon proficiency. if the PHB can have a TODO for this, so can I -->
+        </rules>
+    </element>
+    <element name="Brutal Brawler (Bonus Action)" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BRUTAL_BRAWLER_BONUS_ACTION">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Brutal Brawler" action="Bonus Action">
+            <description>After a hit with an improvised weapon, break it over your opponent. This destroys the weapon, but treats the weapon's damage dice as having rolled the maximum number. Additional dice added to the damage roll are unaffected.</description>
+            <description level="10">After a hit with an improvised weapon, break it over your opponent. This destroys the weapon, but treats the weapon's damage dice as having rolled the maximum number, then adds 2d6. Additional dice added to the damage roll are unaffected.</description>
+        </sheet>
+    </element>
+
+    <element name="Misdirection" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_MISDIRECTION">
+        <description>
+            <p><em>7th-level Scofflaw feature</em></p>
+			<p class="indent">At 7th level, you are adept at using words and gestures to taunt or fakeout your opponent, turning their lack of composure against them. This allows you to goad your foe into swinging in ways that can cause them to strike their allies, or which leave them open to a counterattack. As a bonus action you can misdirect an opponent within 5 feet of you. The target must succeed on an Intelligence saving throw against a DC equal to 8 + your proficiency bonus + your Strength or Dexterity modifier. On a failure, they must spend their reaction to attack a creature of your choosing within 5 feet of them. If no other creatures are present within 5 feet of them, they waste their reaction attacking the air where you once were.</p>
+            <p class="indent">In order for you to misdirect a creature in this way they must be able to see, hear, or otherwise be able to understand you.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>Choose an opponent within 5ft of you who you can somehow communicate with. They must make a DC{{misdirection:dc}} Intelligence saving throw. On failure: they must spend their reaction to attack a creature of your choosing within 5ft of them. If no others are present, they use their reaction to attack the air.</description>
+        </sheet>
+        <rules>
+            <stat name="misdirection:dc" value="8" bonus="base" />
+            <stat name="misdirection:dc" value="proficiency" bonus="proficiency" />
+            <stat name="misdirection:dc" value="strength:modifier" bonus="modifier" />
+            <stat name="misdirection:dc" value="dexterity:modifier" bonus="modifier" />
+        </rules>
+    </element>
+
+    <element name="Blindside" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_BLINDSIDE">
+        <description>
+            <p><em>10th-level Scofflaw feature</em></p>
+			<p class="indent">At 10th level, you are truly skilled at exploiting the openings you create in combat, hitting off-guard opponents with precise blows that are swift and deadly. You may use this technique against any creature that hasn't yet taken a turn in combat, or who you have successfully misdirected this turn. You may also apply this technique to any attack roll for which you have advantage. On a hit, you exploit an opening in the target’s defenses. You can choose to have your attack deal an extra 5d6 points of damage. Once you use this ability, you can’t use it again until you have taken a short or long rest.</p>
+            <p class="indent">At 15th level, the damage dealt by your blindside increases to 7d6.</p>
+            <p class="indent">At 18th level the damage dealt by your blindside increases to 9d6. If you have no uses of this ability at the beginning of combat on your turn, you regain one use of it.</p>
+        </description>
+        <sheet action="Hit" usage="1/Short Rest">
+            <description>On a succesful hit against a creature that hasn't yet taken a turn in combat, or who you have successfully misdirected this turn; or an attack roll on which you have advantage: deal {{blindside:amount}}d6 extra damage.</description>
+            <description level="18">On a succesful hit against a creature that hasn't yet taken a turn in combat, or who you have successfully misdirected this turn; or an attack roll on which you have advantage: deal {{blindside:amount}}d6 extra damage. If you have no uses of this ability at the beginning of combat on your turn, you regain one use of it.</description>
+        </sheet>
+        <rules>
+            <stat name="blindside:amount" value="5" />
+            <stat name="blindside:amount" value="2" level="15" />
+            <stat name="blindside:amount" value="2" level="18" />
+        </rules>
+    </element>
+
+    <element name="Infamy" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_INFAMY">
+        <description>
+            <p><em>15th-level Scofflaw feature</em></p>
+			<p class="indent">At 15th level, your reputation precedes you, making it easy for you to strike fear into the hearts of anyone foolish enough to oppose you. As part of your attack action, you can utter deadly threats to a single target within 30 feet of you, causing them to become frightened of you for 1 minute on a failed Wisdom saving throw. An affected target may repeat this saving throw at the end of each of their turns, ending the effect on a success. The DC for this saving throw is 8 + your proficiency bonus + your Strength or Dexterity modifier. A creature who has witnessed or heard tales of your ruthlessness rolls their saving throw with disadvantage</p>
+            <p class="indent">In order for you to use this feature, a creature must be able to see, hear, or otherwise be able to understand you.</p>
+        </description>
+        <sheet action="Action">
+            <description>As part of your attack action, target a creature within 30ft of you who can understand you. They must make a DC{{infamy:dc}} Wisdom saving throw. If they have witnessed or heard tales of your ruthlessness, they roll with disadvantage. On failure: the target is frightened of you for 1 minute. They may repeat this saving throw at the end of their turn, ending the effect on a success.</description>
+        </sheet>
+        <rules>
+            <stat name="infamy:dc" value="8" bonus="base" />
+            <stat name="infamy:dc" value="proficiency" bonus="proficiency" />
+            <stat name="infamy:dc" value="strength:modifier" bonus="modifier" />
+            <stat name="infamy:dc" value="dexterity:modifier" bonus="modifier" />
+        </rules>
+    </element>
+
+    <element name="Two For Flinching" type="Archetype Feature" source="Humblewood" id="ID_HPP_WOOD_ARCHETYPE_FEATURE_TWO_FOR_FLINCHING">
+        <description>
+            <p><em>18th-level Scofflaw feature</em></p>
+			<p class="indent">At 18th level, you have perfected the art of exploiting your opponent's weakness. Whenever you take the attack action against an opponent you have successfully misdirected this turn, or an opponent that is afflicted by a condition, you may make one additional attack against that opponent. You may only use this feature once per round.</p>
+        </description>
+        <sheet action="Attack" usage="1/Round">
+            <description>When you attack a foe who you have successfully misdirected this turn, or who is afflicted by a condition: make one additional attack against that foe.</description>
+        </sheet>
+    </element>
+</elements>

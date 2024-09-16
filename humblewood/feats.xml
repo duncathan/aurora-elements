@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name></name>
+        <update version="0.1.0">
+            <file name="feats.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/feats.xml" />
+        </update>
+    </info>
+    
+    <element name="Aerial Expert" type="Feat" source="Humblewood" id="ID_HPP_WOOD_FEAT_AERIAL_EXPERT">
+        <prerequisite>Glide trait</prerequisite>
+        <requirements>ID_HPP_WOOD_RACIAL_TRAIT_GLIDE</requirements>
+        <description>
+            <p>Your feathered arms are much stronger and more wing-like than others of your kind. You gain the following benefits:</p>
+            <ul>
+                <li>Your feathered arms make it easier to jump. You no longer need to move at least 10 feet to perform long and high jumps. You may choose whether the jump uses your Strength or Dexterity score for determining height or distance, and you double the distance you would normally leap in either case.</li>
+                <li>You may take the Dash action while gliding to fly an additional distance up to your movement speed.</li>
+                <li>You may change direction freely while gliding, and may gain up to 10 feet of altitude once before you finish your descent.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>You may change direction freely while gliding.</description>
+        </sheet>
+        <rules>
+            <grant type="Feat Feature" id="ID_HPP_WOOD_FEAT_AERIAL_EXPERT_JUMP" />
+            <grant type="Feat Feature" id="ID_HPP_WOOD_FEAT_AERIAL_EXPERT_DASH" />
+            <grant type="Feat Feature" id="ID_HPP_WOOD_FEAT_AERIAL_EXPERT_FLY" />
+        </rules>
+    </element>
+    <element name="Aerial Expert (Jump)" type="Feat Feature" source="Humblewood" id="ID_HPP_WOOD_FEAT_AERIAL_EXPERT_JUMP">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Aerial Expert" action="Move" usage="Jumping">
+            <description>You can jump a distance of {{aerial expert:long:total}}ft or a height of {{aerial expert:high:total}}ft, even from a standstill.</description>
+        </sheet>
+        <rules>
+            <stat name="aerial expert:score" value="strength:score" bonus="score" />
+            <stat name="aerial expert:score" value="dexterity:score" bonus="score" />
+
+            <stat name="aerial expert:modifier" value="strength:modifier" bonus="modifier" />
+            <stat name="aerial expert:modifier" value="dexterity:modifier" bonus="modifier" />
+
+            <stat name="aerial expert:long:base" value="aerial expert:score" />
+            <stat name="aerial expert:long:total" value="aerial expert:long:base" />
+            <stat name="aerial expert:long:total" value="aerial expert:long:base" />
+
+            <stat name="aerial expert:high:base" value="3" />
+            <stat name="aerial expert:high:base" value="aerial expert:modifier" />
+            <stat name="aerial expert:high:total" value="aerial expert:high:base" />
+            <stat name="aerial expert:high:total" value="aerial expert:high:base" />
+        </rules>
+    </element>
+    <element name="Aerial Expert (Dash)" type="Feat Feature" source="Humblewood" id="ID_HPP_WOOD_FEAT_AERIAL_EXPERT_DASH">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Aerial Expert" action="Action" usage="Gliding">
+            <description>You may Dash to fly up to {{speed}}ft.</description>
+        </sheet>
+    </element>
+    <element name="Aerial Expert (Fly)" type="Feat Feature" source="Humblewood" id="ID_HPP_WOOD_FEAT_AERIAL_EXPERT_FLY">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Aerial Expert" action="Move" usage="1/Glide">
+            <description>You may gain up to 10ft of altitude.</description>
+        </sheet>
+    </element>
+
+    <element name="Bandit Cunning" type="Feat" source="Humblewood" id="ID_HPP_WOOD_FEAT_BANDIT_CUNNING">
+        <description>
+            <p>Your time as a bandit has granted you a sense for danger, and made you skilled at sizing up opponents. You gain the following benefits:</p>
+            <ul>
+                <li>When you are asked to make a saving throw, you may spend your reaction to add your Intelligence modifier as an additional bonus to the saving throw. You cannot use this ability again until you have completed a long rest.</li>
+                <li>
+                    During combat, you can use your action to make an Intelligence (Investigation) check against any creature you have seen fight. As long as you succeed against a DC of 10 + their challenge rating, you can learn one useful fact of your choice about the target’s combat abilities. Choose from:
+                    <ul>
+                        <li>one damage resistance or immunity</li>
+                        <li>one condition immunity</li>
+                        <li>one special ability possessed by the creature that either does damage, or prevents damage</li>
+                        <li>one option under their attack, legendary, or reaction actions</li>
+                        <li>one special sense they possess</li>
+                    </ul>
+                </li>
+            </ul>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat Feature" id="ID_HPP_WOOD_FEAT_BANDIT_CUNNING_REACTION" />
+            <grant type="Feat Feature" id="ID_HPP_WOOD_FEAT_BANDIT_CUNNING_ACTION" />
+        </rules>
+    </element>
+    <element name="Bandit Cunning (Reaction)" type="Feat Feature" source="Humblewood" id="ID_HPP_WOOD_FEAT_BANDIT_CUNNING_REACTION">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Bandit Cunning" action="Reaction" usage="1/Long Rest">
+            <description>You may add {{intelligence:modifier}} to the result of a saving throw.</description>
+        </sheet>
+    </element>
+    <element name="Bandit Cunning (Action)" type="Feat Feature" source="Humblewood" id="ID_HPP_WOOD_FEAT_BANDIT_CUNNING_ACTION">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Bandit Cunning" action="Action" usage="Combat">
+            <description>Make an Intelligence (Investigation) check against any creature you've seen fight (DC 10 + CR). If successful, choose one fact to learn:&#13;
+            • one damage resistance or immunity&#13;
+            • one condition immunity&#13;
+            • one special ability possessed by the creature that either does damage, or prevents damage&#13;
+            • one option under their attack, legendary, or reaction actions&#13;
+            • one special sense they possess</description>
+        </sheet>
+    </element>
+
+    <element name="Heavy Glider" type="Feat" source="Humblewood" id="ID_HPP_WOOD_FEAT_HEAVY_GLIDER">
+        <prerequisite>Glide trait</prerequisite>
+        <requirements>ID_HPP_WOOD_RACIAL_TRAIT_GLIDE</requirements>
+        <description>
+            <p>You were either born with great strength, or trained hard to allow yourself to glide under circumstances most would find impossible. You gain the following benefits:</p>
+            <ul>
+                <li>You may glide while holding a heavy weapon and wearing heavy armor as long as you arent encumbered.</li>
+                <li>You may choose to land your glide in a space occupied by a hostile creature that is Large or smaller. If you do so, you may roll an opposed Strength check against the creature. On a success, you push them 10 feet away and knock them prone with the force of your impact. On a failure you land in the nearest un-occupied space.</li>
+            </ul>
+        </description>
+        <sheet action="Move" usage="Landing">
+            <description>You may land your glide in a space occupied by a Large (or smaller) enemy. Roll a Strength contest against it: on success, you push them 10ft away and knock them prone. On failure, you land in the nearest open space.</description>
+        </sheet>
+    </element>
+    <element name="Glide (Heavy Glider)" type="Racial Trait" source="Humblewood" id="ID_HPP_WOOD_RACIAL_TRAIT_GLIDE_HEAVY_GLIDER">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Glide" action="Reaction" usage="While Falling">
+            <description>You fall at a speed of 60ft/round, taking no fall damage. If you would fall at least 10ft, you may fly up to your movement speed in one direction you choose. You cannot glide while wielding a shield or encumbered. You may drop any held items as part of your reaction.</description>
+        </sheet>
+    </element>
+
+    <element name="Opportunistic Thief" type="Feat" source="Humblewood" id="ID_HPP_WOOD_FEAT_OPPORTUNISTIC_THIEF">
+        <description>
+            <p>You have learned the tricks of the trade of thievery, allowing you to exploit opportunities for pick-pocketing both in and out of combat. You gain the following benefits:</p>
+            <ul>
+                <li>Increase your Dexterity score by 1.</li>
+                <li>When a creature fails a melee attack roll against you in combat, you can make a Dexterity (Sleight of Hand) check against a DC equal to 10 + the target’s Dexterity modifier. On a success, you may steal any one item that is not being held or worn by the target.</li>
+                <li>Whenever you successfully use your Sleight of Hand skill outside of combat to steal an object, you may immediately conceal it flawlessly on your person, or put another object you possess in its place.</li>
+            </ul>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="dexterity" value="1" />
+            <grant type="Feat Feature" id="ID_HPP_WOOD_FEAT_OPPORTUNISTIC_THIEF_COMBAT" />
+            <grant type="Feat Feature" id="ID_HPP_WOOD_FEAT_OPPORTUNISTIC_THIEF_NONCOMBAT" />
+        </rules>
+    </element>
+    <element name="Opportunistic Thief (Combat)" type="Feat Feature" source="Humblewood" id="ID_HPP_WOOD_FEAT_OPPORTUNISTIC_THIEF_COMBAT">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Opportunistic Thief">
+            <description>When a creature fails a melee attack roll against you, you can make a Dexterity (Sleight of Hand) check against their passive Dexterity. On success, steal one item not being held or worn by the target.</description>
+        </sheet>
+    </element>
+    <element name="Opportunistic Thief (Non-Combat)" type="Feat Feature" source="Humblewood" id="ID_HPP_WOOD_FEAT_OPPORTUNISTIC_THIEF_NONCOMBAT">
+        <description />
+        <compendium display="false" />
+        <sheet alt="Opportunistic Thief">
+            <description>When you use your Sleight of Hand skill outside of combat to steal an object, you may immediately conceal it flawlessly on your person, or put another object you possess in its place.</description>
+        </sheet>
+    </element>
+
+    <element name="Perfect Landing" type="Feat" source="Humblewood" id="ID_HPP_WOOD_FEAT_PERFECT_LANDING">
+        <description>
+            <p>Years of living at great heights have taught you how to fall more gracefully. You gain the following benefits:</p>
+            <ul>
+                <li>Increase your Dexterity score by 1</li>
+                <li>Reduce the damage die for fall damage from a d6 to a d4.</li>
+                <li>You do not fall prone after taking falling damage.</li>
+                <li>You do not take damage for the first 30 feet of your fall.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>Your damage die for fall damage is a d4. You do not fall prone after taking fall damage. You do not take damage for the first 30 feet of your fall.</description>
+        </sheet>
+        <rules>
+            <stat name="dexterity" value="1" />
+        </rules>
+    </element>
+
+    <element name="Speech of the Ancient Beasts" type="Feat" source="Humblewood" id="ID_HPP_WOOD_FEAT_SPEECH_OF_THE_ANCIENT_BEASTS">
+        <description>
+            <p>You have a special connection with the natural world. Great beasts regard you as their kin, and you possess the ability to speak the languages of the most powerful and mystic of their kind. You gain the following benefits:</p>
+            <ul>
+                <li>Increase your Charisma score by 1.</li>
+                <li>Beasts of Large size or larger have a friendly disposition toward you unless you have attacked them.</li>
+                <li>You have advantage on Charisma checks made against beasts that are of Large size or larger.</li>
+                <li>You can speak and understand Giant Eagle, Giant Elk, and Giant Owl. You can otherwise be understood by any beast of Large size or larger, whether or not they speak a language. Beasts with Intelligence scores of 4 or lower may only be able to understand simple concepts.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>You gain these benefits with beasts of Large size or larger:&#13;
+            • They have a friendly disposition toward you unless you have attacked them&#13;
+            • You have advantage on Charisma checks made against them&#13;
+            • You can be understood by them, whether or not they speak a language. Beasts with Intelligence scores of 4 or lower may only be able to understand simple concepts.</description>
+        </sheet>
+        <rules>
+            <stat name="charisma" value="1" />
+            <grant type="Language" id="ID_MM_LANGUAGE_GIANT_EAGLE" />
+            <grant type="Language" id="ID_MM_LANGUAGE_GIANT_ELK" />
+            <grant type="Language" id="ID_MM_LANGUAGE_GIANT_OWL" />
+        </rules>
+    </element>
+
+    <element name="Woodwise" type="Feat" source="Humblewood" id="ID_HPP_WOOD_FEAT_WOODWISE">
+        <description>
+            <p>You have lived your entire life in the gnarled, wooded areas of the world. You are adept at finding your way through even the most treacherous terrain. You gain the following benefits:</p>
+            <ul>
+                <li>You gain proficiency in either the Survival or Nature skill.</li>
+                <li>You ignore difficult terrain.</li>
+                <li>You cannot become lost in natural surroundings except by magical means.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>You ignore difficult terrain, and cannot become lost in natural surroundings except by magical means.</description>
+        </sheet>
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency (Woodwise)" supports="ID_PROFICIENCY_SKILL_SURVIVAL|ID_PROFICIENCY_SKILL_NATURE" />
+        </rules>
+    </element>
+</elements>
