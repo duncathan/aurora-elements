@@ -4,7 +4,7 @@
 		<name>Humblewood Campaign Setting</name>
 		<description>Play as woodland creatures in this grand adventure to fight the fires threatening all of Humblewood!</description>
 		<author url="https://hitpointpress.com">Hit Point Press</author>
-		<update version="0.1.0">
+		<update version="0.1.1">
 			<file name="humblewood.index" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood.index" />
 		</update>
 	</info>
@@ -25,7 +25,7 @@
 		<file name="shared-traits.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/races/shared-traits.xml" />
 
 		<!-- archetypes -->
-		<file name="bard-road.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/bard-road.xml" />
+		<file name="bard-road.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/bard-road.xml" />
 		<file name="cleric-community.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/cleric-community.xml" />
 		<file name="cleric-night.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/cleric-night.xml" />
 		<file name="fighter-scofflaw.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/fighter-scofflaw.xml" />

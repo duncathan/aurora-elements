@@ -2,8 +2,8 @@
 <elements>
     <info>
         <name></name>
-        <update version="0.1.0">
-            <file name="bard-road.xml" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/bard-road.xml" />
+        <update version="0.1.1">
+            <file name="bard-road.xml" url="https://raw.githubusercontent.com/duncathan/aurora-elements/main/humblewood/classes/bard-road.xml" />
         </update>
     </info>
     
